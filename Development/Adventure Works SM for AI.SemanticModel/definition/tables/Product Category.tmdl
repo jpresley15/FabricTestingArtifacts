@@ -1,0 +1,56 @@
+table 'Product Category'
+	lineageTag: 7301e247-2af5-4cf0-8642-fea8ac8332d6
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e49ba784-f9a1-4669-8b56-899dae42b34f
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCategoryAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 60773821-d56b-44a6-a413-aa52b1294945
+		summarizeBy: none
+		sourceColumn: ProductCategoryAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishProductCategoryName
+		dataType: string
+		lineageTag: 319d5db8-1c3c-41a8-a174-9b124d1061a2
+		summarizeBy: none
+		sourceColumn: EnglishProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishProductCategoryName
+		dataType: string
+		lineageTag: a6c0f0cd-35ae-4531-89fb-0a5ee3b0a9c5
+		summarizeBy: none
+		sourceColumn: SpanishProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchProductCategoryName
+		dataType: string
+		lineageTag: 4494dece-3235-4c03-b0a3-da5488fe546d
+		summarizeBy: none
+		sourceColumn: FrenchProductCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimproductcategory = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimproductcategory = Source{[Schema="dbo",Item="dimproductcategory"]}[Data]
+				in
+				    dbo_dimproductcategory
+
+	annotation PBI_ResultType = Table
+

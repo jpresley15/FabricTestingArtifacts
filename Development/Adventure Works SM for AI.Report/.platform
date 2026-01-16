@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Adventure Works SM for AI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c6de2f67-87bd-4427-a6f9-3a7817adba48"
+  }
+}

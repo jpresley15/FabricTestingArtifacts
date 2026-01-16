@@ -12,16 +12,16 @@ annotation PBI_QueryOrder = ["dimaccount","dimcurrency","dimcustomer","dimdate",
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table dimaccount
-ref table dimcurrency
-ref table dimcustomer
-ref table dimdate
-ref table dimgeography
-ref table dimproduct
-ref table dimproductcategory
-ref table dimproductsubcategory
-ref table factinternetsales
-ref table factresellersales
+ref table Account
+ref table Currency
+ref table Customer
+ref table Date
+ref table Geography
+ref table Product
+ref table 'Product Category'
+ref table 'Product Subcategory'
+ref table 'Internet Sales'
+ref table 'Reseller Sales'
 
 ref cultureInfo en-US
 
