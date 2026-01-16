@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dimaccount","dimcurrency","dimcustomer","dimdate","dimgeography","dimproduct","dimproductcategory","dimproductsubcategory","factinternetsales","factresellersales"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dimaccount
+ref table dimcurrency
+ref table dimcustomer
+ref table dimdate
+ref table dimgeography
+ref table dimproduct
+ref table dimproductcategory
+ref table dimproductsubcategory
+ref table factinternetsales
+ref table factresellersales
+
+ref cultureInfo en-US
+

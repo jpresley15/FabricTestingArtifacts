@@ -1,0 +1,92 @@
+table dimaccount
+	lineageTag: cf205a0f-6217-42a0-be36-de71ea572812
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 007f2766-4c27-42de-8c81-13d5a889ed53
+		summarizeBy: count
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountKey
+		dataType: double
+		lineageTag: 62495e58-bdce-4141-84e3-352dde2f56fc
+		summarizeBy: count
+		sourceColumn: ParentAccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AccountCodeAlternateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c114743-d378-45ca-a5c9-4a5b784dc704
+		summarizeBy: count
+		sourceColumn: AccountCodeAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountCodeAlternateKey
+		dataType: double
+		lineageTag: f1fbaa08-e4dd-4b9b-8d81-9622b9066994
+		summarizeBy: count
+		sourceColumn: ParentAccountCodeAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AccountDescription
+		dataType: string
+		lineageTag: fd9cef71-5e6d-4976-b47b-bee06352196a
+		summarizeBy: none
+		sourceColumn: AccountDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountType
+		dataType: string
+		lineageTag: 2b376fe0-fc00-427b-97ea-3e2fc1360a48
+		summarizeBy: none
+		sourceColumn: AccountType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Operator
+		dataType: string
+		lineageTag: 6ec9d92a-4a79-4856-b05c-cc0eb29fff9f
+		summarizeBy: none
+		sourceColumn: Operator
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomMembers
+		dataType: string
+		lineageTag: f8a5e967-91ef-4ea0-811a-516bb7378a9d
+		summarizeBy: none
+		sourceColumn: CustomMembers
+
+		annotation SummarizationSetBy = Automatic
+
+	column ValueType
+		dataType: string
+		lineageTag: 214091a8-b7ab-4d9b-a4ea-ffa9a6dfaaba
+		summarizeBy: none
+		sourceColumn: ValueType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimaccount = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimaccount = Source{[Schema="dbo",Item="dimaccount"]}[Data]
+				in
+				    dbo_dimaccount
+
+	annotation PBI_ResultType = Table
+

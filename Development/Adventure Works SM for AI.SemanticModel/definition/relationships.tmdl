@@ -1,0 +1,40 @@
+relationship AutoDetected_2f6ef47c-857b-4833-b94e-84321a12ec03
+	fromColumn: factinternetsales.CurrencyKey
+	toColumn: dimcurrency.CurrencyKey
+
+relationship AutoDetected_02a32c23-859f-4428-9654-98c4cb5a443b
+	fromColumn: factresellersales.CurrencyKey
+	toColumn: dimcurrency.CurrencyKey
+
+relationship AutoDetected_a1c5bd86-c2a5-46d9-bdc7-a54a127de9a6
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship AutoDetected_87cc3c37-91dc-44e6-91ab-439828ff8088
+	fromColumn: dimcustomer.GeographyKey
+	toColumn: dimgeography.GeographyKey
+
+relationship AutoDetected_133c66ca-6a78-4af0-89f1-9513ea55cc4f
+	fromColumn: factinternetsales.ProductKey
+	toColumn: dimproduct.ProductKey
+
+relationship AutoDetected_f43672fd-aa61-418c-8e4a-214614cd906a
+	fromColumn: factresellersales.ProductKey
+	toColumn: dimproduct.ProductKey
+
+relationship AutoDetected_9293b2ae-415c-4655-924b-a42f9ebf6e28
+	fromColumn: dimproductsubcategory.ProductCategoryKey
+	toColumn: dimproductcategory.ProductCategoryKey
+
+relationship 79aa4698-1a1a-e47d-eb47-61af86663eb8
+	fromColumn: dimproduct.ProductSubcategoryKey
+	toColumn: dimproductsubcategory.ProductSubcategoryKey
+
+relationship 15b4c019-a09e-2e11-c30e-c049a799887d
+	fromColumn: factinternetsales.ShipDateKey
+	toColumn: dimdate.DateKey
+
+relationship f8376c00-3a09-30fd-aedc-f23938f44423
+	fromColumn: factresellersales.ShipDateKey
+	toColumn: dimdate.DateKey
+
