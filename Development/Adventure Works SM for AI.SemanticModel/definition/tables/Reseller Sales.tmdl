@@ -1,11 +1,6 @@
 table 'Reseller Sales'
 	lineageTag: fdb6fcd4-cdfa-4b93-aa4d-2be0fe736c26
 
-	measure 'Total Internet and Reseller Sales' = sum(factinternetsales[SalesAmount]) + sum(factresellersales[SalesAmount])
-		lineageTag: 9b67ab51-8c83-4be5-9e96-d94640b8f163
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ProductKey
 		dataType: int64
 		formatString: 0

@@ -22,6 +22,7 @@ ref table 'Product Category'
 ref table 'Product Subcategory'
 ref table 'Internet Sales'
 ref table 'Reseller Sales'
+ref table 'Key Metrics'
 
 ref cultureInfo en-US
 

@@ -1,0 +1,19 @@
+/// Table to hold measures only
+table 'Key Metrics'
+
+	measure 'Reseller Sales' = sum(factresellersales[SalesAmount])
+		displayFolder: Reseller Sales Metrics
+
+	measure 'Internet Sales' = sum(factinternetsales[SalesAmount])
+		displayFolder: Internet Sales Metrics
+
+	measure 'Total Internet and Reseller Sales' = sum(factinternetsales[SalesAmount]) + sum(factresellersales[SalesAmount])
+		displayFolder: Total Sales Metrics
+		lineageTag: 9b67ab51-8c83-4be5-9e96-d94640b8f163
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Key Metrics' = calculated
+		mode: import
+		source = ROW("Placeholder", 1)
+
