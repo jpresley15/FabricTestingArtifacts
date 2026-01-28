@@ -3,6 +3,7 @@ table Date
 
 	column DateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: c36df5e8-2ff1-4f54-8766-9368beb816f6
 		summarizeBy: none
@@ -10,9 +11,9 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column FullDateAlternateKey
+	column 'Full Date Alternate Key'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: MM/dd/yyyy
 		lineageTag: fc60ae94-7c79-4cfc-a098-3a0152e8f3bd
 		summarizeBy: none
 		sourceColumn: FullDateAlternateKey
@@ -21,7 +22,7 @@ table Date
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column DayNumberOfWeek
+	column 'Day Number Of Week'
 		dataType: int64
 		formatString: 0
 		lineageTag: 5a4a5d03-f707-4437-bcb5-2757467290cc
@@ -30,7 +31,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishDayNameOfWeek
+	column 'English Day Name Of Week'
 		dataType: string
 		lineageTag: 8f6c8424-ce70-46ba-9a30-9c7b0f889167
 		summarizeBy: none
@@ -38,23 +39,25 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishDayNameOfWeek
+	column 'Spanish Day Name Of Week'
 		dataType: string
+		isHidden
 		lineageTag: 87bdba32-a42a-461e-9173-2c7a0c687ddd
 		summarizeBy: none
 		sourceColumn: SpanishDayNameOfWeek
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchDayNameOfWeek
+	column 'French Day Name Of Week'
 		dataType: string
+		isHidden
 		lineageTag: c6cd5f87-5037-4ffa-a59a-c44148cd317b
 		summarizeBy: none
 		sourceColumn: FrenchDayNameOfWeek
 
 		annotation SummarizationSetBy = Automatic
 
-	column DayNumberOfMonth
+	column 'Day Number Of Month'
 		dataType: int64
 		formatString: 0
 		lineageTag: 1490ac95-dc48-42cb-8ac8-fe0ac755a20c
@@ -63,7 +66,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column DayNumberOfYear
+	column 'Day Number Of Year'
 		dataType: int64
 		formatString: 0
 		lineageTag: 0f5b47ca-0440-45d7-a57d-a41a5ef35306
@@ -72,7 +75,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column WeekNumberOfYear
+	column 'Week Number Of Year'
 		dataType: int64
 		formatString: 0
 		lineageTag: 6aae4876-331f-4113-a407-9ece34ae946f
@@ -81,7 +84,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishMonthName
+	column 'English Month Name'
 		dataType: string
 		lineageTag: 346c6bd7-a1aa-4bb5-b19e-25118544b329
 		summarizeBy: none
@@ -89,23 +92,25 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishMonthName
+	column 'Spanish Month Name'
 		dataType: string
+		isHidden
 		lineageTag: 1e8b3aee-76d2-4051-b117-6e3bdd3c1507
 		summarizeBy: none
 		sourceColumn: SpanishMonthName
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchMonthName
+	column 'French Month Name'
 		dataType: string
+		isHidden
 		lineageTag: 891d3623-85e1-4e84-8c38-896ba3344c20
 		summarizeBy: none
 		sourceColumn: FrenchMonthName
 
 		annotation SummarizationSetBy = Automatic
 
-	column MonthNumberOfYear
+	column 'Month Number Of Year'
 		dataType: int64
 		formatString: 0
 		lineageTag: 7e56b707-9f5f-4e86-9713-910c4af8bced
@@ -114,7 +119,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column CalendarQuarter
+	column 'Calendar Quarter'
 		dataType: int64
 		formatString: 0
 		lineageTag: 83b746c8-290f-4740-bcdc-29a9108a5bd4
@@ -123,7 +128,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column CalendarYear
+	column 'Calendar Year'
 		dataType: int64
 		formatString: 0
 		lineageTag: 0bd2329d-bc6e-423d-ba07-557254886c24
@@ -132,7 +137,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column CalendarSemester
+	column 'Calendar Semester'
 		dataType: int64
 		formatString: 0
 		lineageTag: bb5c3da1-ecf1-49bd-ad42-58fbf372ed49
@@ -141,7 +146,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column FiscalQuarter
+	column 'Fiscal Quarter'
 		dataType: int64
 		formatString: 0
 		lineageTag: fdc380f7-5fca-49b3-b0ea-ced7c0ee6e0c
@@ -150,7 +155,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column FiscalYear
+	column 'Fiscal Year'
 		dataType: int64
 		formatString: 0
 		lineageTag: 59208c7b-cb98-4030-a954-e0cd8e58402e
@@ -159,7 +164,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column FiscalSemester
+	column 'Fiscal Semester'
 		dataType: int64
 		formatString: 0
 		lineageTag: 859da340-ddb1-47a8-abee-c14f623625d1

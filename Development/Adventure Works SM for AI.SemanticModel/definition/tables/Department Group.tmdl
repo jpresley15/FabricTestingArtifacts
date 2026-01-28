@@ -1,0 +1,43 @@
+table 'Department Group'
+	lineageTag: 9d95a531-c490-4813-9444-bfe231953558
+
+	column DepartmentGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c2edeaf-a0e5-4256-9554-f5b6a32e2b37
+		summarizeBy: none
+		sourceColumn: DepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentDepartmentGroupKey
+		dataType: double
+		lineageTag: d673638e-3d87-46d6-9dae-c0124e282442
+		summarizeBy: none
+		sourceColumn: ParentDepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DepartmentGroupName
+		dataType: string
+		lineageTag: 43cdf637-2433-49d5-9e85-2fec6b84a2c7
+		summarizeBy: none
+		sourceColumn: DepartmentGroupName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Department Group' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimdepartmentgroup = Source{[Schema="dbo",Item="dimdepartmentgroup"]}[Data]
+				in
+				    dbo_dimdepartmentgroup
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

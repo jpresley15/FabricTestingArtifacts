@@ -4,121 +4,43 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 546,
+        "y": 1
       },
       "nodes": [
         {
           "location": {
-            "x": 1752.3183228261541,
-            "y": 91.025387579096332
+            "x": 2439.3183228261541,
+            "y": 37.025387579096332
           },
-          "nodeIndex": "dimaccount",
+          "nodeIndex": "Account",
           "nodeLineageTag": "cf205a0f-6217-42a0-be36-de71ea572812",
           "size": {
             "height": 296,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 1173.5093950819798,
-            "y": 411.952814706971
+            "x": 1485.5093950819798,
+            "y": 329.952814706971
           },
-          "nodeIndex": "dimcurrency",
+          "nodeIndex": "Currency",
           "nodeLineageTag": "df3bde88-db31-486f-abab-aa1a25dbaebc",
           "size": {
             "height": 152,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 17
         },
         {
           "location": {
-            "x": 331.26125693104166,
-            "y": 416.05077515819278
+            "x": 57.261256931041657,
+            "y": 464.05077515819278
           },
-          "nodeIndex": "dimcustomer",
+          "nodeIndex": "Customer",
           "nodeLineageTag": "d425be50-d270-4674-a89c-7e8c9824c50f",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 410.31832282615414,
-            "y": 0
-          },
-          "nodeIndex": "dimdate",
-          "nodeLineageTag": "da00236a-a8d2-4340-8927-3b6e77d5becd",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 10
-        },
-        {
-          "location": {
-            "x": 50,
-            "y": 22.587908035190139
-          },
-          "nodeIndex": "dimgeography",
-          "nodeLineageTag": "70fc53f6-29cb-4dac-98af-0af9f82c28ea",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 739.42418975863666,
-            "y": -49.987595472140811
-          },
-          "nodeIndex": "dimproduct",
-          "nodeLineageTag": "e92f9e95-4334-4a67-87cb-ed1a8b028d26",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 1454.3183228261541,
-            "y": 522.02538757909633
-          },
-          "nodeIndex": "dimproductcategory",
-          "nodeLineageTag": "7301e247-2af5-4cf0-8642-fea8ac8332d6",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 1350.3183228261541,
-            "y": 165.02538757909633
-          },
-          "nodeIndex": "dimproductsubcategory",
-          "nodeLineageTag": "e0707e48-c935-4641-ae98-63829f5e4da0",
-          "size": {
-            "height": 224,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 674.65865678685282,
-            "y": 393.72982776313864
-          },
-          "nodeIndex": "factinternetsales",
-          "nodeLineageTag": "e40ce8b3-3cd5-403a-a716-029fde4eb100",
           "size": {
             "height": 300,
             "width": 234
@@ -127,16 +49,198 @@
         },
         {
           "location": {
-            "x": 1156.3183228261541,
-            "y": 679
+            "x": 334.31832282615414,
+            "y": 374
           },
-          "nodeIndex": "factresellersales",
+          "nodeIndex": "Date",
+          "nodeLineageTag": "da00236a-a8d2-4340-8927-3b6e77d5becd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 33,
+            "y": 0
+          },
+          "nodeIndex": "Geography",
+          "nodeLineageTag": "70fc53f6-29cb-4dac-98af-0af9f82c28ea",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 614.65865678685282,
+            "y": 687.7298277631387
+          },
+          "nodeIndex": "Internet Sales",
+          "nodeLineageTag": "e40ce8b3-3cd5-403a-a716-029fde4eb100",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 1135.4241897586367,
+            "y": 44
+          },
+          "nodeIndex": "Product",
+          "nodeLineageTag": "e92f9e95-4334-4a67-87cb-ed1a8b028d26",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 446.31832282615414,
+            "y": 0
+          },
+          "nodeIndex": "Product Category",
+          "nodeLineageTag": "7301e247-2af5-4cf0-8642-fea8ac8332d6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 756.31832282615414,
+            "y": 0
+          },
+          "nodeIndex": "Product Subcategory",
+          "nodeLineageTag": "e0707e48-c935-4641-ae98-63829f5e4da0",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1509.3183228261541,
+            "y": 782
+          },
+          "nodeIndex": "Reseller Sales",
           "nodeLineageTag": "fdb6fcd4-cdfa-4b93-aa4d-2be0fe736c26",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1978.3183228261541,
+            "y": 42.493797736070405
+          },
+          "nodeIndex": "Key Metrics",
+          "nodeLineageTag": "a4e9ef91-6116-49c7-9921-f91899307227",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 2121.5030740067841,
+            "y": 777.49379773607041
+          },
+          "nodeIndex": "Finance",
+          "nodeLineageTag": "53bba5a9-f3d5-46be-9497-595a29f958ae",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1797.6799622415137,
+            "y": 775.49379773607041
+          },
+          "nodeIndex": "Inventory",
+          "nodeLineageTag": "ec400b4b-d3a9-4f7f-b798-69d3ef10e7cb",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 2461.6799622415137,
+            "y": 694.81879036850489
+          },
+          "nodeIndex": "Organization",
+          "nodeLineageTag": "0d39abf4-b2f5-4476-b853-81c1f6dd8bb5",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 2270.3183228261541,
+            "y": 375.558906913412
+          },
+          "nodeIndex": "Scenario",
+          "nodeLineageTag": "d8484450-2479-4a3c-b5e0-e139d388c41b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 2695.6799622415137,
+            "y": 465
+          },
+          "nodeIndex": "Department Group",
+          "nodeLineageTag": "9d95a531-c490-4813-9444-bfe231953558",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2979.6799622415137,
+            "y": 391
+          },
+          "nodeIndex": "Promotion",
+          "nodeLineageTag": "af642a1a-1986-4745-9be0-8882beded719",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 3263.6799622415137,
+            "y": 391
+          },
+          "nodeIndex": "Reseller",
+          "nodeLineageTag": "86e30de2-fa7a-4211-8752-6405160f8e6d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
         }
       ],
       "name": "All tables",

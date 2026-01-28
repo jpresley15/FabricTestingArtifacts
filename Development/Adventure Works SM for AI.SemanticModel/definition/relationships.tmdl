@@ -39,3 +39,47 @@ relationship f8376c00-3a09-30fd-aedc-f23938f44423
 	fromColumn: 'Reseller Sales'.ShipDateKey
 	toColumn: Date.DateKey
 
+relationship AutoDetected_cfcbcb57-3e44-4398-a895-34c61cd41540
+	fromColumn: Finance.AccountKey
+	toColumn: Account.AccountKey
+
+relationship AutoDetected_c7211c87-d1c5-4441-a489-07090eb7f068
+	fromColumn: Finance.DateKey
+	toColumn: Date.DateKey
+
+relationship AutoDetected_e072af8d-a31b-4906-af2c-5a32d8cb301a
+	fromColumn: Inventory.DateKey
+	toColumn: Date.DateKey
+
+relationship AutoDetected_49799dd0-66ad-4b72-9f6e-3791dc3d44ae
+	fromColumn: Inventory.ProductKey
+	toColumn: Product.ProductKey
+
+relationship AutoDetected_fb47bc73-a011-4976-8e1f-db87e899a461
+	fromColumn: Finance.OrganizationKey
+	toColumn: Organization.OrganizationKey
+
+relationship AutoDetected_16692f24-524a-4d22-82ee-713466eda852
+	fromColumn: Finance.ScenarioKey
+	toColumn: Scenario.ScenarioKey
+
+relationship AutoDetected_23400ef4-0083-415a-b14a-c567ccb67af7
+	fromColumn: Reseller.GeographyKey
+	toColumn: Geography.GeographyKey
+
+relationship AutoDetected_c222ebe3-96ee-49e4-9744-b1236ab683b5
+	fromColumn: 'Internet Sales'.PromotionKey
+	toColumn: Promotion.PromotionKey
+
+relationship AutoDetected_3a131ad9-1009-41ce-8535-38eb415ae0a4
+	fromColumn: 'Reseller Sales'.PromotionKey
+	toColumn: Promotion.PromotionKey
+
+relationship AutoDetected_946458ae-a64a-4984-907a-7469e21f23d9
+	fromColumn: 'Reseller Sales'.ResellerKey
+	toColumn: Reseller.ResellerKey
+
+relationship AutoDetected_e8dff744-5302-44c1-b367-95f1718ee981
+	fromColumn: Finance.DepartmentGroupKey
+	toColumn: 'Department Group'.DepartmentGroupKey
+

@@ -1,0 +1,82 @@
+table Inventory
+	lineageTag: ec400b4b-d3a9-4f7f-b798-69d3ef10e7cb
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: e0de93ce-44f2-4639-8419-2162e5b4f270
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d544ca3-7495-4ba1-81d4-275d59b41a61
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MovementDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3d28bd34-7d4d-4903-93b4-cd32468c2458
+		summarizeBy: none
+		sourceColumn: MovementDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column UnitCost
+		dataType: double
+		lineageTag: b45bbd73-6050-4095-b995-aa6c537b73e3
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitsIn
+		dataType: int64
+		formatString: 0
+		lineageTag: 828b1699-7535-4aae-b377-97d2ff16c2ed
+		summarizeBy: sum
+		sourceColumn: UnitsIn
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsOut
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b66c985-6226-4a6c-81e1-9b74c2af5d60
+		summarizeBy: sum
+		sourceColumn: UnitsOut
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsBalance
+		dataType: int64
+		formatString: 0
+		lineageTag: 2632c7dc-153f-481b-8d92-73c928478fb5
+		summarizeBy: sum
+		sourceColumn: UnitsBalance
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Inventory = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_factproductinventory = Source{[Schema="dbo",Item="factproductinventory"]}[Data]
+				in
+				    dbo_factproductinventory
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

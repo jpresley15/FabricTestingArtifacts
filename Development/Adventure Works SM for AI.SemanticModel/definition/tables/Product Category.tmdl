@@ -3,6 +3,7 @@ table 'Product Category'
 
 	column ProductCategoryKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: e49ba784-f9a1-4669-8b56-899dae42b34f
 		summarizeBy: none
@@ -12,6 +13,7 @@ table 'Product Category'
 
 	column ProductCategoryAlternateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 60773821-d56b-44a6-a413-aa52b1294945
 		summarizeBy: none
@@ -19,7 +21,7 @@ table 'Product Category'
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishProductCategoryName
+	column 'Product Category'
 		dataType: string
 		lineageTag: 319d5db8-1c3c-41a8-a174-9b124d1061a2
 		summarizeBy: none
@@ -27,16 +29,18 @@ table 'Product Category'
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishProductCategoryName
+	column 'Spanish Product Category Name'
 		dataType: string
+		isHidden
 		lineageTag: a6c0f0cd-35ae-4531-89fb-0a5ee3b0a9c5
 		summarizeBy: none
 		sourceColumn: SpanishProductCategoryName
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchProductCategoryName
+	column 'French Product Category Name'
 		dataType: string
+		isHidden
 		lineageTag: 4494dece-3235-4c03-b0a3-da5488fe546d
 		summarizeBy: none
 		sourceColumn: FrenchProductCategoryName

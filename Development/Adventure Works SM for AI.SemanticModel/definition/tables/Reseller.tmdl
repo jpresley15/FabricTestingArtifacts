@@ -1,0 +1,197 @@
+table Reseller
+	lineageTag: 86e30de2-fa7a-4211-8752-6405160f8e6d
+
+	column ResellerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ce25de84-63a1-456c-8c96-bd59b65dd028
+		summarizeBy: none
+		sourceColumn: ResellerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f7468921-7def-4aef-a5a4-ea9a89b75271
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResellerAlternateKey
+		dataType: string
+		isHidden
+		lineageTag: a21aa0f4-71d1-45a1-96aa-2a72e9bff982
+		summarizeBy: none
+		sourceColumn: ResellerAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Phone
+		dataType: string
+		lineageTag: 857671aa-9328-4d62-9834-32bfe9bbfc24
+		summarizeBy: none
+		sourceColumn: Phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Type'
+		dataType: string
+		lineageTag: f0934111-1bbf-4bc1-96f9-d7f4f14d377d
+		summarizeBy: none
+		sourceColumn: BusinessType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reseller Name'
+		dataType: string
+		lineageTag: 1d2dd597-95bf-4c34-bf59-c21330feef8f
+		summarizeBy: none
+		sourceColumn: ResellerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Number Employees'
+		dataType: int64
+		formatString: 0
+		lineageTag: 00d4c0a6-0a60-4b70-8fd1-a7b4bed9934c
+		summarizeBy: sum
+		sourceColumn: NumberEmployees
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Frequency'
+		dataType: string
+		lineageTag: 6de9f516-8be9-429d-b278-6d3045b475fe
+		summarizeBy: none
+		sourceColumn: OrderFrequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Order Month'
+		dataType: double
+		lineageTag: 8f83abb3-e2cf-4cb8-8b11-8493527f13a3
+		summarizeBy: sum
+		sourceColumn: OrderMonth
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'First Order Year'
+		dataType: double
+		lineageTag: 325e00fd-6dde-4f57-b2cb-dfc58b08bcfa
+		summarizeBy: sum
+		sourceColumn: FirstOrderYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Last Order Year'
+		dataType: double
+		lineageTag: c90b318f-2f66-46b7-ba58-f5c4b6cefae4
+		summarizeBy: sum
+		sourceColumn: LastOrderYear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Product Line'
+		dataType: string
+		lineageTag: 548cce71-87b4-44bf-95e4-1b0926a7e00f
+		summarizeBy: none
+		sourceColumn: 'Product Line'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Address Line 1'
+		dataType: string
+		lineageTag: 7bbae929-8da7-4f4e-8d13-cf063b89740d
+		summarizeBy: none
+		sourceColumn: 'Address Line 1'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Address Line 2'
+		dataType: string
+		lineageTag: e9206852-3d29-4918-8b2a-f994872c6c2a
+		summarizeBy: none
+		sourceColumn: 'Address Line 2'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Annual Sales'
+		dataType: double
+		lineageTag: b2bb7032-0202-41a8-bd9f-ce44ffce1923
+		summarizeBy: sum
+		sourceColumn: 'Annual Sales'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Bank Name'
+		dataType: string
+		lineageTag: 29f50ad7-e852-4f8c-82ca-8818560341d4
+		summarizeBy: none
+		sourceColumn: 'Bank Name'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Min Payment Type'
+		dataType: double
+		lineageTag: 5e9052c1-0b4c-4221-b891-da91747b610f
+		summarizeBy: sum
+		sourceColumn: 'Min Payment Type'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Min Payment Amount'
+		dataType: double
+		lineageTag: 0748e336-0367-4ba1-8845-288c0e59b2a8
+		summarizeBy: sum
+		sourceColumn: 'Min Payment Amount'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Annual Revenue'
+		dataType: double
+		lineageTag: 6c8f36f8-f834-421e-884f-953fcbe13e89
+		summarizeBy: sum
+		sourceColumn: 'Annual Revenue'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Year Opened'
+		dataType: int64
+		formatString: 0
+		lineageTag: bbba8b4a-479b-4c50-80bb-68406a36556a
+		summarizeBy: sum
+		sourceColumn: 'Year Opened'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Reseller = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimreseller = Source{[Schema="dbo",Item="dimreseller"]}[Data]
+				in
+				    dbo_dimreseller
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

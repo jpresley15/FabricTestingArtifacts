@@ -35,7 +35,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column FirstName
+	column 'First Name'
 		dataType: string
 		lineageTag: 50f550a4-f4c8-4c8a-8aa1-e665e14e8d9c
 		summarizeBy: none
@@ -43,7 +43,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column MiddleName
+	column 'Middle Name'
 		dataType: string
 		lineageTag: b47c6a44-3b29-4e25-b7bc-c25d0eabc903
 		summarizeBy: none
@@ -51,7 +51,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column LastName
+	column 'Last Name'
 		dataType: string
 		lineageTag: 89ef63ee-a24a-4064-84ec-9aa5986d3d65
 		summarizeBy: none
@@ -59,7 +59,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column NameStyle
+	column 'Name Style'
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: daf7ed84-b5bb-4198-b667-d40519e998a2
@@ -68,7 +68,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column BirthDate
+	column 'Birth Date'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 9da5b236-6c65-467b-aba8-83c7ebd34393
@@ -79,7 +79,7 @@ table Customer
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column MaritalStatus
+	column 'Marital Status'
 		dataType: string
 		lineageTag: 59e2bb50-68ec-4b59-a9b8-db5a6db1e206
 		summarizeBy: none
@@ -103,7 +103,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column EmailAddress
+	column 'Email Address'
 		dataType: string
 		lineageTag: 890f616f-94ab-4216-a75f-63e1c0614ec4
 		summarizeBy: none
@@ -111,7 +111,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column YearlyIncome
+	column 'Yearly Income'
 		dataType: double
 		lineageTag: ea283a24-ed85-4d01-9eeb-b454b47ef8ac
 		summarizeBy: sum
@@ -121,7 +121,7 @@ table Customer
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column TotalChildren
+	column 'Total Children'
 		dataType: int64
 		formatString: 0
 		lineageTag: f7be4e25-ffd0-4de7-bece-d6b221556482
@@ -130,7 +130,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column NumberChildrenAtHome
+	column 'Number Children At Home'
 		dataType: int64
 		formatString: 0
 		lineageTag: cdd67ade-8cfe-4ee7-86a3-7072067e4c60
@@ -139,7 +139,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishEducation
+	column 'English Education'
 		dataType: string
 		lineageTag: 121c7a25-3f71-40ef-bd9d-4172c7d61867
 		summarizeBy: none
@@ -147,7 +147,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishEducation
+	column 'Spanish Education'
 		dataType: string
 		lineageTag: 94151ad2-986e-42c2-98ab-fbe18ca31c27
 		summarizeBy: none
@@ -155,7 +155,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchEducation
+	column 'French Education'
 		dataType: string
 		lineageTag: fadc1e12-23fa-41f8-9e33-397693e26a29
 		summarizeBy: none
@@ -163,7 +163,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishOccupation
+	column 'English Occupation'
 		dataType: string
 		lineageTag: 1be849ac-8686-4e47-9cfb-5735e80fd7f5
 		summarizeBy: none
@@ -171,7 +171,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishOccupation
+	column 'Spanish Occupation'
 		dataType: string
 		lineageTag: 84663e8f-82bc-4e48-8845-fbe94f165883
 		summarizeBy: none
@@ -179,7 +179,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchOccupation
+	column 'French Occupation'
 		dataType: string
 		lineageTag: c1cbcb0f-5f69-4cbe-bb6e-d3dd60bd562c
 		summarizeBy: none
@@ -187,7 +187,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column HouseOwnerFlag
+	column 'House Owner Flag'
 		dataType: string
 		lineageTag: 821006a6-c49d-451c-a5ce-74e972b9f7f9
 		summarizeBy: none
@@ -195,7 +195,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column NumberCarsOwned
+	column 'Number Cars Owned'
 		dataType: int64
 		formatString: 0
 		lineageTag: 72f9257d-f7af-40da-82ef-f1017b7ce395
@@ -204,7 +204,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column AddressLine1
+	column 'Address Line 1'
 		dataType: string
 		lineageTag: 15bb92c6-3e6c-4843-a15a-896b0fba133b
 		summarizeBy: none
@@ -212,7 +212,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column AddressLine2
+	column 'Address Line 2'
 		dataType: string
 		lineageTag: be22d379-48bb-4f2c-94ce-8f63c8bf111b
 		summarizeBy: none
@@ -228,7 +228,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column DateFirstPurchase
+	column 'Date First Purchase'
 		dataType: dateTime
 		formatString: Long Date
 		lineageTag: 2c8c7a99-3bb9-46a1-a7a6-75cf3a52fdba
@@ -239,7 +239,7 @@ table Customer
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column CommuteDistance
+	column 'Commute Distance'
 		dataType: string
 		lineageTag: 38993dde-c876-4373-94e3-a1567a9c7bfe
 		summarizeBy: none

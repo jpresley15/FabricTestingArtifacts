@@ -3,6 +3,7 @@ table Product
 
 	column ProductKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: fc12add7-abc7-479f-9432-5c867ef7950e
 		summarizeBy: none
@@ -12,6 +13,7 @@ table Product
 
 	column ProductAlternateKey
 		dataType: string
+		isHidden
 		lineageTag: 5a108e9b-a5d5-4024-a6cf-a5aadfea957f
 		summarizeBy: none
 		sourceColumn: ProductAlternateKey
@@ -20,6 +22,7 @@ table Product
 
 	column ProductSubcategoryKey
 		dataType: double
+		isHidden
 		lineageTag: bbe0e857-946b-4b84-a2e2-36703e58a64b
 		summarizeBy: none
 		sourceColumn: ProductSubcategoryKey
@@ -28,7 +31,7 @@ table Product
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column WeightUnitMeasureCode
+	column 'Weight Unit Measure Code'
 		dataType: string
 		lineageTag: a0eda8b8-380e-45ab-9dde-f9977e6e6d25
 		summarizeBy: none
@@ -36,7 +39,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column SizeUnitMeasureCode
+	column 'Size Unit Measure Code'
 		dataType: string
 		lineageTag: 4c86df57-4500-4f40-b3cb-277eb3fc59f7
 		summarizeBy: none
@@ -44,7 +47,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishProductName
+	column 'Product Name'
 		dataType: string
 		lineageTag: 6f82c8ee-5f45-4cb9-8815-676c2b3d3585
 		summarizeBy: none
@@ -52,23 +55,25 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishProductName
+	column 'Spanish Product Name'
 		dataType: string
+		isHidden
 		lineageTag: b25ea061-1920-4326-81b8-28f2ce32eab0
 		summarizeBy: none
 		sourceColumn: SpanishProductName
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchProductName
+	column 'French Product Name'
 		dataType: string
+		isHidden
 		lineageTag: aa3e4644-d8d8-4208-abbf-18483e98e227
 		summarizeBy: none
 		sourceColumn: FrenchProductName
 
 		annotation SummarizationSetBy = Automatic
 
-	column StandardCost
+	column 'Standard Cost'
 		dataType: double
 		lineageTag: b8e99ec3-e74c-436b-aa67-88f2c5a880e0
 		summarizeBy: sum
@@ -78,7 +83,7 @@ table Product
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column FinishedGoodsFlag
+	column 'Finished Goods Flag'
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: 9b847d46-2485-4422-be0f-b27a79b76672
@@ -95,7 +100,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column SafetyStockLevel
+	column 'Safety Stock Level'
 		dataType: int64
 		formatString: 0
 		lineageTag: 3bf104f1-d036-4535-8073-9aa28a118786
@@ -104,7 +109,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column ReorderPoint
+	column 'Reorder Point'
 		dataType: int64
 		formatString: 0
 		lineageTag: 0fbc382f-51ec-49dc-8efe-7374d4446e54
@@ -113,7 +118,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column ListPrice
+	column 'List Price'
 		dataType: double
 		lineageTag: 638a245c-b839-4754-8ad7-5c6810f56ee1
 		summarizeBy: sum
@@ -131,7 +136,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column SizeRange
+	column 'Size Range'
 		dataType: string
 		lineageTag: 7bb8322c-f13f-41a7-b5a8-70617adc0ffd
 		summarizeBy: none
@@ -149,7 +154,7 @@ table Product
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DaysToManufacture
+	column 'Days To Manufacture'
 		dataType: int64
 		formatString: 0
 		lineageTag: d15a7b5e-7a25-4822-93d1-f40268a4b040
@@ -158,7 +163,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductLine
+	column 'Product Line'
 		dataType: string
 		lineageTag: 770c6c0e-230a-4b63-bcbd-5e7389f93246
 		summarizeBy: none
@@ -166,7 +171,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column DealerPrice
+	column 'Dealer Price'
 		dataType: double
 		lineageTag: 5039b2c5-8658-42f8-ab4a-33f3477dbf5c
 		summarizeBy: sum
@@ -192,7 +197,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column ModelName
+	column 'Model Name'
 		dataType: string
 		lineageTag: c603d81b-a8ca-4042-83e2-b4e4e2d667d0
 		summarizeBy: none
@@ -200,7 +205,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishDescription
+	column Description
 		dataType: string
 		lineageTag: c6fdd344-7ed5-42d8-bb8f-78a6cad1010d
 		summarizeBy: none
@@ -208,71 +213,79 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchDescription
+	column 'French Description'
 		dataType: string
+		isHidden
 		lineageTag: 3bd5d91f-ab8d-4b89-b023-2f0e2b13ef38
 		summarizeBy: none
 		sourceColumn: FrenchDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column ChineseDescription
+	column 'Chinese Description'
 		dataType: string
+		isHidden
 		lineageTag: 4c2659ab-2ade-4995-85f8-7dc2ae1ea855
 		summarizeBy: none
 		sourceColumn: ChineseDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column ArabicDescription
+	column 'Arabic Description'
 		dataType: string
+		isHidden
 		lineageTag: 89a8bb15-8b5c-478b-9651-7359da5112b1
 		summarizeBy: none
 		sourceColumn: ArabicDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column HebrewDescription
+	column 'Hebrew Description'
 		dataType: string
+		isHidden
 		lineageTag: cda76ca4-4fc7-4da2-a1d7-667fdff6248a
 		summarizeBy: none
 		sourceColumn: HebrewDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column ThaiDescription
+	column 'Thai Description'
 		dataType: string
+		isHidden
 		lineageTag: 20390e1d-400c-4ee4-a826-6478d7715011
 		summarizeBy: none
 		sourceColumn: ThaiDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column GermanDescription
+	column 'German Description'
 		dataType: string
+		isHidden
 		lineageTag: 6dcda894-a0d7-499a-be9e-2635704ad291
 		summarizeBy: none
 		sourceColumn: GermanDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column JapaneseDescription
+	column 'Japanese Description'
 		dataType: string
+		isHidden
 		lineageTag: 5c7e1b85-5d70-4afe-8afa-deb100509a19
 		summarizeBy: none
 		sourceColumn: JapaneseDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column TurkishDescription
+	column 'Turkish Description'
 		dataType: string
+		isHidden
 		lineageTag: 72ef48c3-116d-4bb4-96f8-57ce376f95e3
 		summarizeBy: none
 		sourceColumn: TurkishDescription
 
 		annotation SummarizationSetBy = Automatic
 
-	column StartDate
+	column 'Start Date'
 		dataType: dateTime
 		formatString: General Date
 		lineageTag: c3d2d9d8-e3f1-4fa0-a608-04443b1b76dd
@@ -281,7 +294,7 @@ table Product
 
 		annotation SummarizationSetBy = Automatic
 
-	column EndDate
+	column 'End Date'
 		dataType: dateTime
 		formatString: General Date
 		lineageTag: fef18c48-2ca4-46b6-b853-d6fa08887784

@@ -1,0 +1,34 @@
+table Scenario
+	lineageTag: d8484450-2479-4a3c-b5e0-e139d388c41b
+
+	column ScenarioKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 817f3cf5-cb59-4e14-8ef7-80b8db936f5b
+		summarizeBy: none
+		sourceColumn: ScenarioKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scenario
+		dataType: string
+		lineageTag: dfdee5ed-690c-467e-8f6e-d6015e746963
+		summarizeBy: none
+		sourceColumn: ScenarioName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Scenario = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimscenario = Source{[Schema="dbo",Item="dimscenario"]}[Data]
+				in
+				    dbo_dimscenario
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

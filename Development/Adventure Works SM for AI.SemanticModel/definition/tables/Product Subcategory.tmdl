@@ -3,6 +3,7 @@ table 'Product Subcategory'
 
 	column ProductSubcategoryKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 53d723c7-86a1-494c-9207-1bd4b9885961
 		summarizeBy: none
@@ -12,6 +13,7 @@ table 'Product Subcategory'
 
 	column ProductSubcategoryAlternateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: bdc01c17-286a-4277-a85a-75bc6977fb01
 		summarizeBy: count
@@ -19,7 +21,7 @@ table 'Product Subcategory'
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishProductSubcategoryName
+	column 'Product Subcategory'
 		dataType: string
 		lineageTag: 76494141-dd0a-4f48-a48f-5c7fe9465dd6
 		summarizeBy: none
@@ -27,16 +29,18 @@ table 'Product Subcategory'
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishProductSubcategoryName
+	column 'Spanish Product Subcategory Name'
 		dataType: string
+		isHidden
 		lineageTag: 461e8303-d933-4245-a5f1-d373188db2b5
 		summarizeBy: none
 		sourceColumn: SpanishProductSubcategoryName
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchProductSubcategoryName
+	column 'French Product Subcategory Name'
 		dataType: string
+		isHidden
 		lineageTag: 46107b57-7458-4efc-98ec-06622b12b6ea
 		summarizeBy: none
 		sourceColumn: FrenchProductSubcategoryName
@@ -45,6 +49,7 @@ table 'Product Subcategory'
 
 	column ProductCategoryKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 3c20e629-e4af-4601-bb7f-17125e179383
 		summarizeBy: none

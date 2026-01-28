@@ -3,6 +3,7 @@ table Currency
 
 	column CurrencyKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 7c9b6374-b096-42ad-aef6-ef5d6d2af3a6
 		summarizeBy: none
@@ -12,13 +13,14 @@ table Currency
 
 	column CurrencyAlternateKey
 		dataType: string
+		isHidden
 		lineageTag: ab8e2a6c-c960-44c4-a43f-0fcf8f793f56
 		summarizeBy: none
 		sourceColumn: CurrencyAlternateKey
 
 		annotation SummarizationSetBy = Automatic
 
-	column CurrencyName
+	column Currency
 		dataType: string
 		lineageTag: 0d41b2a9-105d-41fc-93fa-3d02e2e25e8d
 		summarizeBy: none

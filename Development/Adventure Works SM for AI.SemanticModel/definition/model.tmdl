@@ -8,9 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["dimaccount","dimcurrency","dimcustomer","dimdate","dimgeography","dimproduct","dimproductcategory","dimproductsubcategory","factinternetsales","factresellersales"]
+annotation PBI_QueryOrder = ["Account","Currency","Customer","Date","Geography","Product","Product Category","Product Subcategory","Internet Sales","Reseller Sales","Finance","Organization","Scenario","Inventory","Department Group","Promotion","Reseller"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
+
+annotation __TEdtr = 1
 
 ref table Account
 ref table Currency
@@ -23,6 +25,13 @@ ref table 'Product Subcategory'
 ref table 'Internet Sales'
 ref table 'Reseller Sales'
 ref table 'Key Metrics'
+ref table Finance
+ref table Organization
+ref table Scenario
+ref table Inventory
+ref table 'Department Group'
+ref table Promotion
+ref table Reseller
 
 ref cultureInfo en-US
 

@@ -3,6 +3,7 @@ table Geography
 
 	column GeographyKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 8425039f-0833-4eff-8973-d85150c9bc59
 		summarizeBy: none
@@ -18,7 +19,7 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column StateProvinceCode
+	column 'State Province Code'
 		dataType: string
 		lineageTag: f56ae6bf-f25f-4408-8068-f7452444533f
 		summarizeBy: none
@@ -26,7 +27,7 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column StateProvinceName
+	column 'State Province Name'
 		dataType: string
 		lineageTag: c0f6b591-77e4-4fe3-8f86-ba9233b8471b
 		summarizeBy: none
@@ -34,7 +35,7 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column CountryRegionCode
+	column 'Country Region Code'
 		dataType: string
 		lineageTag: 794a8ed2-ba76-4d64-a11e-c00946503e8e
 		summarizeBy: none
@@ -42,7 +43,7 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishCountryRegionName
+	column 'English Country Region Name'
 		dataType: string
 		lineageTag: d82f6a25-e266-47b7-ba66-08d7ea890a1c
 		summarizeBy: none
@@ -50,23 +51,25 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishCountryRegionName
+	column 'Spanish Country Region Name'
 		dataType: string
+		isHidden
 		lineageTag: f3c2a715-4a1b-4ffb-93b3-11b42fde266f
 		summarizeBy: none
 		sourceColumn: SpanishCountryRegionName
 
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchCountryRegionName
+	column 'French Country Region Name'
 		dataType: string
+		isHidden
 		lineageTag: 8c6df4ec-29a8-433b-bb1a-28281314caeb
 		summarizeBy: none
 		sourceColumn: FrenchCountryRegionName
 
 		annotation SummarizationSetBy = Automatic
 
-	column PostalCode
+	column 'Postal Code'
 		dataType: string
 		lineageTag: c9a54b1c-8946-4031-baf9-e5f441a26008
 		summarizeBy: none
@@ -76,14 +79,15 @@ table Geography
 
 	column SalesTerritoryKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 0dc5e48a-df4a-406c-a893-7d2d826c8573
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: SalesTerritoryKey
 
 		annotation SummarizationSetBy = Automatic
 
-	column IpAddressLocator
+	column 'Ip Address Locator'
 		dataType: string
 		lineageTag: e315bbf9-8701-47c2-a9d4-e4679250b0ef
 		summarizeBy: none

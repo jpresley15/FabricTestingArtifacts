@@ -1,4 +1,5 @@
 table 'Internet Sales'
+	isHidden
 	lineageTag: e40ce8b3-3cd5-403a-a716-029fde4eb100
 
 	column ProductKey
@@ -50,7 +51,7 @@ table 'Internet Sales'
 		dataType: int64
 		formatString: 0
 		lineageTag: b9f83131-db50-4b7c-9c08-39209910a990
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: PromotionKey
 
 		annotation SummarizationSetBy = Automatic

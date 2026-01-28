@@ -1,17 +1,113 @@
 /// Table to hold measures only
 table 'Key Metrics'
+	lineageTag: a4e9ef91-6116-49c7-9921-f91899307227
 
-	measure 'Reseller Sales' = sum(factresellersales[SalesAmount])
+	measure 'Reseller Sales Amount' = SUM ( 'Reseller Sales'[SalesAmount] )
 		displayFolder: Reseller Sales Metrics
+		lineageTag: b3691c5d-6cf4-4263-a13e-e780585ae5e8
 
-	measure 'Internet Sales' = sum(factinternetsales[SalesAmount])
+	measure 'Internet Sales Amount' = SUM ( 'Internet Sales'[SalesAmount] )
 		displayFolder: Internet Sales Metrics
+		lineageTag: 0f9b10d6-9816-4a01-8974-7eb4592df33c
 
-	measure 'Total Internet and Reseller Sales' = sum(factinternetsales[SalesAmount]) + sum(factresellersales[SalesAmount])
+	measure 'Total Internet and Reseller Sales Amount' = SUM ( 'Internet Sales'[SalesAmount] ) + SUM ( 'Reseller Sales'[SalesAmount] )
 		displayFolder: Total Sales Metrics
 		lineageTag: 9b67ab51-8c83-4be5-9e96-d94640b8f163
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inventory Units Balance' =
+			VAR MaxDate =
+			    MAX ( 'Date'[DateKey] )
+			VAR LastDates =
+			    ADDCOLUMNS (
+			        CALCULATETABLE ( VALUES ( 'Inventory'[ProductKey] ), ALL ( 'Date' ) ),
+			        "LastDay",
+			            CALCULATE (
+			                MAX ( 'Inventory'[DateKey] ),
+			                ALL ( 'Date' ),
+			                'Date'[DateKey] <= MaxDate
+			            )
+			    )
+			VAR LastDatesWithLineage =
+			    TREATAS ( LastDates, 'Inventory'[ProductKey], 'Date'[DateKey] )
+			RETURN
+			    CALCULATE ( SUM ( 'Inventory'[UnitsBalance] ), LastDatesWithLineage )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: d8790650-8dec-4749-a8c1-f1a8550cdd84
+
+	measure 'Inventory Units In' = SUM ( 'Inventory'[UnitsIn] )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: 383da8f5-ed65-415a-8bd9-539a45cfc13c
+
+	measure 'Inventory Units Out' = SUM ( 'Inventory'[UnitsOut] )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: 8f754fba-84a8-4a18-b98d-054f8d52bf6f
+
+	measure 'Inventory Value Balance' =
+			VAR MaxDate =
+			    MAX ( 'Date'[DateKey] )
+			VAR LastDates =
+			    ADDCOLUMNS (
+			        CALCULATETABLE ( VALUES ( 'Inventory'[ProductKey] ), ALL ( 'Date' ) ),
+			        "LastDay",
+			            CALCULATE (
+			                MAX ( 'Inventory'[DateKey] ),
+			                ALL ( 'Date' ),
+			                'Date'[DateKey] <= MaxDate
+			            )
+			    )
+			VAR LastDatesWithLineage =
+			    TREATAS ( LastDates, 'Inventory'[ProductKey], 'Date'[DateKey] )
+			RETURN
+			    CALCULATE (
+			        SUMX ( 'Inventory', 'Inventory'[UnitCost] * 'Inventory'[UnitsBalance] ),
+			        LastDatesWithLineage
+			    )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: c53ee962-5fe1-4809-8da4-55eb33b97707
+
+	measure 'Inventory Value Out' = SUMX ( 'Inventory', 'Inventory'[UnitsOut] * 'Inventory'[UnitCost] )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: 8a326cb7-bb7d-4576-ace3-7d3ee02e1291
+
+	measure 'Inventory Value In' = SUMX ( 'Inventory', 'Inventory'[UnitsIn] * 'Inventory'[UnitCost] )
+		formatString: #,##0
+		displayFolder: Inventory Metrics
+		lineageTag: 98c6ae62-8077-4e72-8dde-f7783decbe9d
+
+	measure 'Reseller Sales Qty' = SUM ( 'Reseller Sales'[OrderQuantity] )
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 06e81c8a-4c23-4f73-8eba-3e0caffa50d1
+
+	measure 'Internet Sales Qty' = SUM ( 'Internet Sales'[OrderQuantity] )
+		displayFolder: Internet Sales Metrics
+		lineageTag: da8e993d-24b8-4a1c-b493-cf996221e723
+
+	measure 'Total Internet and Reseller Sales Qty' = SUM ( 'Internet Sales'[OrderQuantity] ) + SUM ( 'Reseller Sales'[OrderQuantity] )
+		displayFolder: Total Sales Metrics
+		lineageTag: 44325b3a-c51c-4d31-b942-baec2fc8f5e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'GL Amount' = CALCULATE ( SUM ( 'Finance'[Amount] ), 'Account'[ValueType] = "Currency" )
+		displayFolder: Finance Metrics
+		lineageTag: c485be74-6a62-45c8-84ac-2ccfd361f223
+
+	measure 'GL Quantity' = CALCULATE ( SUM ( 'Finance'[Amount] ), 'Account'[ValueType] = "Units" )
+		displayFolder: Finance Metrics
+		lineageTag: 12bc8e13-d707-4385-9d66-d824d30d5d80
+
+	column Placeholder
+		isHidden
+		lineageTag: c06ba0c9-2225-4ca0-8ccf-5c7a916f2702
+		isNameInferred
+		sourceColumn: [Placeholder]
 
 	partition 'Key Metrics' = calculated
 		mode: import

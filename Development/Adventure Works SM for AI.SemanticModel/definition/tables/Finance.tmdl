@@ -1,0 +1,90 @@
+table Finance
+	isHidden
+	lineageTag: 53bba5a9-f3d5-46be-9497-595a29f958ae
+
+	column FinanceKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 449c95a8-5978-4c18-959e-2a1a98b5dbae
+		summarizeBy: count
+		sourceColumn: FinanceKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 360ca99c-1071-46df-a3b4-d07652105f5a
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: edeab699-3668-4426-9149-65536bb84470
+		summarizeBy: none
+		sourceColumn: OrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentGroupKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5674b58e-733a-4213-bfec-a8a60590d574
+		summarizeBy: none
+		sourceColumn: DepartmentGroupKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScenarioKey
+		dataType: int64
+		formatString: 0
+		lineageTag: cef80ed0-1766-435b-b760-57bc0918a8a4
+		summarizeBy: none
+		sourceColumn: ScenarioKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3d0909b3-7d2e-4f6e-a15c-e7d7d94d4c9e
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 5842c8b6-223c-42fc-a46a-d7122cf298bc
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a8d60fe7-b2e9-4259-bf88-00d4a3483fb4
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Finance = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_factfinance = Source{[Schema="dbo",Item="factfinance"]}[Data]
+				in
+				    dbo_factfinance
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,60 @@
+table Organization
+	lineageTag: 0d39abf4-b2f5-4476-b853-81c1f6dd8bb5
+
+	column OrganizationKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 839d3490-8f7d-4b32-83eb-fcf02cbc1adf
+		summarizeBy: none
+		sourceColumn: OrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentOrganizationKey
+		dataType: double
+		lineageTag: 07f089ef-700b-41a6-aed7-d958babfd97d
+		summarizeBy: none
+		sourceColumn: ParentOrganizationKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PercentageOfOwnership
+		dataType: string
+		lineageTag: 77af55ca-80a4-4d84-a5a5-eb75013056b5
+		summarizeBy: none
+		sourceColumn: PercentageOfOwnership
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganizationName
+		dataType: string
+		lineageTag: a5f0c87d-a705-4340-9517-013c167d481d
+		summarizeBy: none
+		sourceColumn: OrganizationName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c595fae-4894-454f-a6cb-6a9b18c8c598
+		summarizeBy: none
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Organization = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mxo6eerekdbeja5vhsrbybhpby-2ozh5f4hhnkelbyrh3jv64qipu.datawarehouse.fabric.microsoft.com", "AdventureWorksLH"),
+				    dbo_dimorganization = Source{[Schema="dbo",Item="dimorganization"]}[Data]
+				in
+				    dbo_dimorganization
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
