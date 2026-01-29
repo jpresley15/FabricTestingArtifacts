@@ -1,0 +1,8 @@
+function _measuresPrevMonth =
+		(
+		    _measure : DECIMAL EXPR,
+		    _timeIntelType : STRING
+		) =>
+		CALCULATE ( _measure, 'Time Intelligence'[Name] = _timeIntelType )
+	lineageTag: 731fad60-412e-4f6e-b1e4-e0e3c61f36e7
+

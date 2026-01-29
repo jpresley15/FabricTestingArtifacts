@@ -1,0 +1,361 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6d7a741208a5e0525310",
+  "position": {
+    "x": 843.11847759361569,
+    "y": 5.5003069367710253,
+    "z": 1,
+    "height": 446.31062001227747,
+    "width": 418.02332719459793,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Calendar Year"
+                }
+              },
+              "queryRef": "Date.Calendar Year",
+              "nativeQueryRef": "Sum of Calendar Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Calendar Quarter"
+                }
+              },
+              "queryRef": "Date.Calendar Quarter",
+              "nativeQueryRef": "Calendar Quarter",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Month Number"
+                }
+              },
+              "queryRef": "Date.Month Number",
+              "nativeQueryRef": "Month Number",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Metrics"
+                    }
+                  },
+                  "Property": "Reseller Sales Qty"
+                }
+              },
+              "queryRef": "Key Metrics.Reseller Sales Qty",
+              "nativeQueryRef": "Reseller Sales Qty"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Key Metrics"
+                    }
+                  },
+                  "Property": "Reseller Sales Amount"
+                }
+              },
+              "queryRef": "Key Metrics.Reseller Sales Amount",
+              "nativeQueryRef": "Reseller Sales Amount"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Date.Calendar Year"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Calendar Year"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Date.Calendar Quarter"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Date"
+                    }
+                  },
+                  "Property": "Calendar Quarter"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Date.Month Number"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "2013L"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "4L"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "3L"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "2L"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "1L"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "2012L"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "4L"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a3249f52ff6805c405c0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Metrics"
+              }
+            },
+            "Property": "Reseller Sales Qty"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d8f5d465369ac5c1f49b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Key Metrics"
+              }
+            },
+            "Property": "Reseller Sales Amount"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3bab753ed24df214a62e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Date"
+              }
+            },
+            "Property": "Calendar Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6e077615544894e381df",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Date"
+              }
+            },
+            "Property": "Calendar Quarter"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4e21f56ff8cb472fb900",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Date"
+              }
+            },
+            "Property": "Month Number"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "be668725de8794fa8900",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Time Intelligence"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "Time Intelligence",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "Name"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Prev Month'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

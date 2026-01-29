@@ -3,10 +3,12 @@ table 'Key Metrics'
 	lineageTag: a4e9ef91-6116-49c7-9921-f91899307227
 
 	measure 'Reseller Sales Amount' = SUM ( 'Reseller Sales'[SalesAmount] )
+		formatString: $#,##0.00
 		displayFolder: Reseller Sales Metrics
 		lineageTag: b3691c5d-6cf4-4263-a13e-e780585ae5e8
 
 	measure 'Internet Sales Amount' = SUM ( 'Internet Sales'[SalesAmount] )
+		formatString: $#,##0.00
 		displayFolder: Internet Sales Metrics
 		lineageTag: 0f9b10d6-9816-4a01-8974-7eb4592df33c
 
@@ -102,6 +104,102 @@ table 'Key Metrics'
 	measure 'GL Quantity' = CALCULATE ( SUM ( 'Finance'[Amount] ), 'Account'[ValueType] = "Units" )
 		displayFolder: Finance Metrics
 		lineageTag: 12bc8e13-d707-4385-9d66-d824d30d5d80
+
+	measure 'Reseller Sales Amount Prev Month' = _measuresPrevMonth([Reseller Sales Amount], "Prev Month")
+		formatString: $#,##0.00
+		displayFolder: Reseller Sales Metrics
+		lineageTag: e341a385-1e26-49c0-a627-3cc9ef62ac64
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Reseller Sales Amount Prev Quarter' = _measuresPrevMonth([Reseller Sales Amount], "Prev Quarter")
+		formatString: $#,##0.00
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 492acb1e-fcc8-4deb-97d5-ce1f3ec6f4f9
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Reseller Sales Amount Prev Year' = _measuresPrevMonth([Reseller Sales Amount], "Prev Year")
+		formatString: $#,##0.00
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 91e5740b-7d15-4300-b21f-fccb5b002b8c
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Internet Sales Amount Prev Month' = _measuresPrevMonth([Internet Sales Amount], "Prev Month")
+		formatString: $#,##0.00
+		displayFolder: Internet Sales Metrics
+		lineageTag: 1adb11a6-f392-4481-bfe2-c3b3bb0eef9a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Internet Sales Amount Prev Quarter' = _measuresPrevMonth([Internet Sales Amount], "Prev Quarter")
+		formatString: $#,##0.00
+		displayFolder: Internet Sales Metrics
+		lineageTag: 9f91fb17-c853-46bd-a8ac-1ab231e1afac
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Internet Sales Amount Prev Year' = _measuresPrevMonth([Internet Sales Amount], "Prev Year")
+		formatString: $#,##0.00
+		displayFolder: Internet Sales Metrics
+		lineageTag: b55c16eb-58ef-455a-9151-aa8ccd7f0b82
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Internet Sales Amount MOM%' =
+			DIVIDE (
+			    [Internet Sales Amount] - [Internet Sales Amount Prev Month],
+			    [Internet Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Internet Sales Metrics
+		lineageTag: 78e048d1-2c94-40bf-8bda-7c518d52ba41
+
+	measure 'Internet Sales Amount YOY%' =
+			DIVIDE (
+			    [Internet Sales Amount] - [Internet Sales Amount Prev Year],
+			    [Internet Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Internet Sales Metrics
+		lineageTag: 50ea4581-922d-4e21-ad8c-22ec8b764a92
+
+	measure 'Internet Sales Amount QOQ%' =
+			DIVIDE (
+			    [Internet Sales Amount] - [Internet Sales Amount Prev Quarter],
+			    [Internet Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Internet Sales Metrics
+		lineageTag: 30e9d929-c4e2-41af-8af7-40f995ae817f
+
+	measure 'Reseller Sales Amount MOM%' =
+			DIVIDE (
+			    [Reseller Sales Amount] - [Reseller Sales Amount Prev Month],
+			    [Reseller Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 7922e6b5-2b25-4b3a-a6b7-fbd57949ea3f
+
+	measure 'Reseller Sales Amount YOY%' =
+			DIVIDE (
+			    [Reseller Sales Amount] - [Reseller Sales Amount Prev Year],
+			    [Reseller Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 5735d9c4-2e2c-4937-a03c-0f861b397912
+
+	measure 'Reseller Sales Amount QOQ%' =
+			DIVIDE (
+			    [Reseller Sales Amount] - [Reseller Sales Amount Prev Quarter],
+			    [Reseller Sales Amount]
+			)
+		formatString: #,##0.0%
+		displayFolder: Reseller Sales Metrics
+		lineageTag: 1a3123a4-fc06-4e41-8d94-8e7106501288
 
 	column Placeholder
 		isHidden

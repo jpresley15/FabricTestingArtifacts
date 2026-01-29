@@ -1,0 +1,23 @@
+table 'Time Intelligence'
+	lineageTag: 166d588a-4dac-4bf3-9a25-7b3233a00ab2
+
+	calculationGroup
+
+		calculationItem 'Prev Year' = CALCULATE ( SELECTEDMEASURE (), DATEADD ( 'Date'[Date], -1, YEAR ) )
+
+		calculationItem 'Prev Quarter' = CALCULATE ( SELECTEDMEASURE (), DATEADD ( 'Date'[Date], -1, QUARTER ) )
+
+		calculationItem 'Prev Month' = CALCULATE ( SELECTEDMEASURE (), DATEADD ( 'Date'[Date], -1, MONTH ) )
+
+	column Name
+		dataType: string
+		lineageTag: ed3bc64b-63b0-4ae1-adae-dbf503233095
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: 5c737a6b-4dbe-41f0-af32-666e0b29d84e
+		sourceColumn: Ordinal
+

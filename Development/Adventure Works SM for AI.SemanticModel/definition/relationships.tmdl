@@ -19,7 +19,6 @@ relationship AutoDetected_133c66ca-6a78-4af0-89f1-9513ea55cc4f
 	toColumn: Product.ProductKey
 
 relationship AutoDetected_f43672fd-aa61-418c-8e4a-214614cd906a
-	crossFilteringBehavior: bothDirections
 	fromColumn: 'Reseller Sales'.ProductKey
 	toColumn: Product.ProductKey
 

@@ -1,5 +1,6 @@
 table Date
 	lineageTag: da00236a-a8d2-4340-8927-3b6e77d5becd
+	dataCategory: Time
 
 	column DateKey
 		dataType: int64
@@ -11,8 +12,9 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Full Date Alternate Key'
+	column Date
 		dataType: dateTime
+		isKey
 		formatString: MM/dd/yyyy
 		lineageTag: fc60ae94-7c79-4cfc-a098-3a0152e8f3bd
 		summarizeBy: none
@@ -21,6 +23,8 @@ table Date
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation TabularEditor_MarkAsDateKey = 1
 
 	column 'Day Number Of Week'
 		dataType: int64
@@ -31,7 +35,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'English Day Name Of Week'
+	column 'Day of Week'
 		dataType: string
 		lineageTag: 8f6c8424-ce70-46ba-9a30-9c7b0f889167
 		summarizeBy: none
@@ -84,7 +88,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'English Month Name'
+	column 'Month Name'
 		dataType: string
 		lineageTag: 346c6bd7-a1aa-4bb5-b19e-25118544b329
 		summarizeBy: none
@@ -110,7 +114,7 @@ table Date
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Month Number Of Year'
+	column 'Month Number'
 		dataType: int64
 		formatString: 0
 		lineageTag: 7e56b707-9f5f-4e86-9713-910c4af8bced
