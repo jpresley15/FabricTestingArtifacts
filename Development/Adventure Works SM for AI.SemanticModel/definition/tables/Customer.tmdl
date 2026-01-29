@@ -12,6 +12,7 @@ table Customer
 
 	column GeographyKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: c3ccc378-c716-466c-b3c4-44ce4d904e73
 		summarizeBy: none
@@ -139,7 +140,7 @@ table Customer
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'English Education'
+	column Education
 		dataType: string
 		lineageTag: 121c7a25-3f71-40ef-bd9d-4172c7d61867
 		summarizeBy: none
@@ -149,6 +150,7 @@ table Customer
 
 	column 'Spanish Education'
 		dataType: string
+		isHidden
 		lineageTag: 94151ad2-986e-42c2-98ab-fbe18ca31c27
 		summarizeBy: none
 		sourceColumn: SpanishEducation
@@ -157,13 +159,14 @@ table Customer
 
 	column 'French Education'
 		dataType: string
+		isHidden
 		lineageTag: fadc1e12-23fa-41f8-9e33-397693e26a29
 		summarizeBy: none
 		sourceColumn: FrenchEducation
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'English Occupation'
+	column Occupation
 		dataType: string
 		lineageTag: 1be849ac-8686-4e47-9cfb-5735e80fd7f5
 		summarizeBy: none
@@ -173,6 +176,7 @@ table Customer
 
 	column 'Spanish Occupation'
 		dataType: string
+		isHidden
 		lineageTag: 84663e8f-82bc-4e48-8845-fbe94f165883
 		summarizeBy: none
 		sourceColumn: SpanishOccupation
@@ -181,6 +185,7 @@ table Customer
 
 	column 'French Occupation'
 		dataType: string
+		isHidden
 		lineageTag: c1cbcb0f-5f69-4cbe-bb6e-d3dd60bd562c
 		summarizeBy: none
 		sourceColumn: FrenchOccupation

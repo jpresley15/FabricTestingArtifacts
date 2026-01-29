@@ -3,6 +3,7 @@ table Organization
 
 	column OrganizationKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 839d3490-8f7d-4b32-83eb-fcf02cbc1adf
 		summarizeBy: none
@@ -12,6 +13,7 @@ table Organization
 
 	column ParentOrganizationKey
 		dataType: double
+		isHidden
 		lineageTag: 07f089ef-700b-41a6-aed7-d958babfd97d
 		summarizeBy: none
 		sourceColumn: ParentOrganizationKey
@@ -20,7 +22,7 @@ table Organization
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column PercentageOfOwnership
+	column 'Percentage Of Ownership'
 		dataType: string
 		lineageTag: 77af55ca-80a4-4d84-a5a5-eb75013056b5
 		summarizeBy: none
@@ -28,7 +30,7 @@ table Organization
 
 		annotation SummarizationSetBy = Automatic
 
-	column OrganizationName
+	column 'Organization Name'
 		dataType: string
 		lineageTag: a5f0c87d-a705-4340-9517-013c167d481d
 		summarizeBy: none
@@ -38,6 +40,7 @@ table Organization
 
 	column CurrencyKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 9c595fae-4894-454f-a6cb-6a9b18c8c598
 		summarizeBy: none

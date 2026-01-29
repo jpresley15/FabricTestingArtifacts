@@ -3,6 +3,7 @@ table 'Department Group'
 
 	column DepartmentGroupKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 0c2edeaf-a0e5-4256-9554-f5b6a32e2b37
 		summarizeBy: none
@@ -12,6 +13,7 @@ table 'Department Group'
 
 	column ParentDepartmentGroupKey
 		dataType: double
+		isHidden
 		lineageTag: d673638e-3d87-46d6-9dae-c0124e282442
 		summarizeBy: none
 		sourceColumn: ParentDepartmentGroupKey
@@ -20,7 +22,7 @@ table 'Department Group'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column DepartmentGroupName
+	column 'Department Group'
 		dataType: string
 		lineageTag: 43cdf637-2433-49d5-9e85-2fec6b84a2c7
 		summarizeBy: none

@@ -3,23 +3,29 @@ table Promotion
 
 	column PromotionKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 08ad0abe-4d14-4f5a-a77c-944e0c69fd6c
 		summarizeBy: none
 		sourceColumn: PromotionKey
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column PromotionAlternateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 01881652-c1ef-4e7f-9d10-26b91aeddafa
 		summarizeBy: count
 		sourceColumn: PromotionAlternateKey
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishPromotionName
+	column 'Promotion Name'
 		dataType: string
 		lineageTag: 9022af18-1a16-4073-9071-92bcbdf1c75f
 		summarizeBy: none
@@ -27,23 +33,29 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishPromotionName
+	column 'Spanish Promotion Name'
 		dataType: string
+		isHidden
 		lineageTag: 9e4b7387-9cf6-4ab5-98a0-ce8b5854ee6a
 		summarizeBy: none
 		sourceColumn: SpanishPromotionName
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchPromotionName
+	column 'French Promotion Name'
 		dataType: string
+		isHidden
 		lineageTag: bb8e5064-cae3-4ab8-8d97-b5f5d84001e7
 		summarizeBy: none
 		sourceColumn: FrenchPromotionName
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column DiscountPct
+	column 'Discount Pct'
 		dataType: double
 		lineageTag: 1b00173c-5a2f-4d62-9973-a6b0a2fa8a5d
 		summarizeBy: sum
@@ -53,7 +65,7 @@ table Promotion
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column EnglishPromotionType
+	column 'Promotion Type'
 		dataType: string
 		lineageTag: bab2a4f8-37e2-4022-8ab3-9196320720fd
 		summarizeBy: none
@@ -61,23 +73,29 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishPromotionType
+	column 'Spanish Promotion Type'
 		dataType: string
+		isHidden
 		lineageTag: 146ef33b-bb04-45c2-bc9c-e198201d6dc0
 		summarizeBy: none
 		sourceColumn: SpanishPromotionType
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchPromotionType
+	column 'French Promotion Type'
 		dataType: string
+		isHidden
 		lineageTag: b9dceaef-bb9b-4607-ba19-7b30e0168241
 		summarizeBy: none
 		sourceColumn: FrenchPromotionType
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column EnglishPromotionCategory
+	column 'Promotion Category'
 		dataType: string
 		lineageTag: 08e70bd3-4b2d-45ba-97ab-a5ba3547216e
 		summarizeBy: none
@@ -85,23 +103,29 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column SpanishPromotionCategory
+	column 'Spanish Promotion Category'
 		dataType: string
+		isHidden
 		lineageTag: 27b4e1dd-0927-4708-80fe-cc0ecc2b5e47
 		summarizeBy: none
 		sourceColumn: SpanishPromotionCategory
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column FrenchPromotionCategory
+	column 'French Promotion Category'
 		dataType: string
+		isHidden
 		lineageTag: 9ccd396b-19b0-48e5-9cb5-a5fb384fe269
 		summarizeBy: none
 		sourceColumn: FrenchPromotionCategory
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column StartDate
+	column 'Start Date'
 		dataType: dateTime
 		formatString: General Date
 		lineageTag: 93c5045d-6b28-4269-8201-b999ddcf8ecc
@@ -110,7 +134,7 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column EndDate
+	column 'End Date'
 		dataType: dateTime
 		formatString: General Date
 		lineageTag: 71732006-234e-4f7f-a552-27ce13d25e84
@@ -119,7 +143,7 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column MinQty
+	column 'Min Qty'
 		dataType: int64
 		formatString: 0
 		lineageTag: 8f4f1d26-a3ee-441b-8c41-d5a3409bab5b
@@ -128,7 +152,7 @@ table Promotion
 
 		annotation SummarizationSetBy = Automatic
 
-	column MaxQty
+	column 'Max Qty'
 		dataType: double
 		lineageTag: e9dfda30-3550-461c-950d-555b40d3fd61
 		summarizeBy: sum

@@ -43,7 +43,7 @@ table Geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'English Country Region Name'
+	column 'Country Region'
 		dataType: string
 		lineageTag: d82f6a25-e266-47b7-ba66-08d7ea890a1c
 		summarizeBy: none
